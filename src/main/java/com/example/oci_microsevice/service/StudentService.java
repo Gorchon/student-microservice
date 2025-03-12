@@ -26,4 +26,24 @@ public class StudentService {
     public Student saveStudent(Student student) {
         return studentRepository.save(student);
     }
+
+    // ✅ Add multiple students at once
+    public List<Student> saveAllStudents(List<Student> students) {
+        return studentRepository.saveAll(students);
+    }
+
+    // ✅ Delete a student by matricula
+    public boolean deleteStudentByMatricula(String matricula) {
+        Optional<Student> student = studentRepository.findByMatricula(matricula);
+        if (student.isPresent()) {
+            studentRepository.delete(student.get());
+            return true;
+        }
+        return false;
+    }
+
+    // ✅ Delete all students
+    public void deleteAllStudents() {
+        studentRepository.deleteAll();
+    }
 }

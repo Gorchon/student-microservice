@@ -2,6 +2,7 @@ package com.example.oci_microsevice.controller;
 
 import com.example.oci_microsevice.model.Student;
 import com.example.oci_microsevice.service.StudentService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,5 +33,31 @@ public class StudentController {
     @PostMapping
     public Student createStudent(@RequestBody Student student) {
         return studentService.saveStudent(student);
+    }
+
+    // ✅ Add multiple students at once
+    @PostMapping("/bulk")
+    public ResponseEntity<List<Student>> createMultipleStudents(@RequestBody List<Student> students) {
+        List<Student> savedStudents = studentService.saveAllStudents(students);
+        return ResponseEntity.ok(savedStudents);
+    }
+
+    // ✅ Delete a student by matricula
+    @DeleteMapping("/{matricula}")
+    public ResponseEntity<String> deleteStudent(@PathVariable String matricula) {
+        boolean deleted = studentService.deleteStudentByMatricula(matricula);
+        if (deleted) {
+            return ResponseEntity.ok("{\"message\": \"Student deleted successfully\"}");
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("{\"message\": \"Student not found\"}");
+        }
+    }
+
+    // ✅ Delete all students
+    @DeleteMapping("/all")
+    public ResponseEntity<String> deleteAllStudents() {
+        studentService.deleteAllStudents();
+        return ResponseEntity.ok("{\"message\": \"All students deleted successfully\"}");
     }
 }
