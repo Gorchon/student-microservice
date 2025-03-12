@@ -1,5 +1,5 @@
-com/example/oci_microsevice/service/UserService.class
-com/example/oci_microsevice/controller/UserController.class
+com/example/oci_microsevice/model/Student.class
+com/example/oci_microsevice/controller/StudentController.class
 com/example/oci_microsevice/OciMicroseviceApplication.class
-com/example/oci_microsevice/model/User.class
-com/example/oci_microsevice/repository/UserRepository.class
+com/example/oci_microsevice/repository/StudentRepository.class
+com/example/oci_microsevice/service/StudentService.class

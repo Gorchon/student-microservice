@@ -1,5 +1,5 @@
 /Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/OciMicroseviceApplication.java
-/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/controller/UserController.java
-/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/model/User.java
-/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/repository/UserRepository.java
-/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/service/UserService.java
+/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/controller/StudentController.java
+/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/model/Student.java
+/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/repository/StudentRepository.java
+/Users/chema./Documents/Programming/JAVA-MICROSERVICE/student-microservice/oci-microsevice/src/main/java/com/example/oci_microsevice/service/StudentService.java
